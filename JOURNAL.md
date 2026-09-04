@@ -21,3 +21,4 @@ Random idea: if I do end up having a significant battery bulge, or if I ever use
 After about an hour or two of slight adjustments and consulting with my father, this is what I came up with. It's obviously a rough draft, as I think I could adjust it even more, especially the thumb cluster. 
 ![ergogen](Pics/pic1.png)
 
+**Total  time spent: 3 hours**
