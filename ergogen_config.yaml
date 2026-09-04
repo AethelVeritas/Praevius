@@ -1,0 +1,66 @@
+meta:
+  engine: 4.1.0
+units:
+  ky: u
+  kx: u
+  kcoh: 14
+  kcow: 14
+points:
+  zones:
+    main:
+      key:
+        padding: 1ky
+        spread: 1kx
+
+      columns: 
+        pinky: 
+          key: 
+            splay: 5
+
+        ring:
+          key:
+            stagger: 0.3ky
+            splay: -4
+            spread: 1.04kx
+
+        middle:
+           key:
+            stagger: 0.2ky
+        index: 
+          key:
+            stagger: -0.33ky
+            splay: -3
+            spread: 1.02kx
+        inner: 
+          key:
+            stagger:
+        
+      rows:
+        bottom:
+        middle:
+        top:
+        number:
+    thumb:
+      anchor:
+        ref: main_inner_bottom
+        shift: [-5-u, -u-3]
+      columns:
+        near:
+        home:
+          key.splay: -5
+          key.spread: 21
+          key.shift: [0, -1]
+        far:
+          key.splay: -12
+          key.spread: 21.5
+          key.shift: [0, -3.5]
+      rows:
+        thumb:
+
+      
+
+
+outlines:
+pcbs:
+cases:
+
