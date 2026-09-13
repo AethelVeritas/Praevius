@@ -1,0 +1,77 @@
+meta:
+  engine: 4.1.0
+units:
+  ky: u
+  kx: u
+  kcoh: 14
+  kcow: 14
+points:
+  zones:
+    matrix:
+      key:
+        padding: 1ky
+        spread: 1kx
+
+      columns:
+        outer:
+          key:
+            splay: 5 
+        pinky: 
+          key: 
+
+        ring:
+          key:
+            stagger: 0.6ky
+            splay: -4.5
+            spread: 1.04kx
+
+        middle:
+           key:
+            stagger: 0.25ky
+        index: 
+          key:
+            stagger: -0.25ky
+            splay: -3
+            spread: 1.02kx
+        inner: 
+          key:
+            stagger:
+        
+      rows:
+        bottom:
+        middle:
+        top:
+        #number:
+    thumb:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [-u+2, -u-2]
+      columns:
+        near:
+        home:
+          key.splay: -9.5
+          key.spread: 20.5
+          key.shift: [0, -1.5]
+        far:
+          key.splay: -14
+          key.spread: 21.5
+          key.shift: [0, -4]
+      rows:
+        thumb:
+
+      
+
+outlines:
+  keycaps:
+    - what: rectangle
+      where: true
+      size: [kx, ky]
+
+  switch_cutouts:
+    - what: rectangle
+      where: true
+      size: [kcow, kcoh]
+
+pcbs:
+cases:
+
