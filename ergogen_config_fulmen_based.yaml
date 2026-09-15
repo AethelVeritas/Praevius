@@ -15,14 +15,14 @@ points:
       columns:
         outer:
           key:
-            splay: 5 
+            splay: 5
         pinky: 
           key: 
 
         ring:
           key:
-            stagger: 0.6ky
-            splay: -4.5
+            stagger: 0.55ky
+            splay: -3
             spread: 1.04kx
 
         middle:
@@ -35,7 +35,7 @@ points:
             spread: 1.02kx
         inner: 
           key:
-            stagger:
+            stagger: 
         
       rows:
         bottom:
@@ -45,7 +45,7 @@ points:
     thumb:
       anchor:
         ref: matrix_inner_bottom
-        shift: [-u+2, -u-2]
+        shift: [-u-2, -u-2]
       columns:
         near:
         home:
