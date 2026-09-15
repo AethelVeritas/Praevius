@@ -50,7 +50,7 @@ After testing it, my father requested some minor changes, such as reducing the s
 
 The main issue at hand for now is the MCU footprint. Haven't been able to find an existing reversible footprint for the NRF52840 Plus, so I'll have to make one myself. Did a bit of research on that, and also made and printed some more test plates. Here's a pic of all I've made so far, with my Fulmen keyboard on the left for reference. It's a rather tedious process, but worth it for a comfortable fit. The one in which I currently have all the switches and keycaps is the final version. 
 
-![plate](Pics/pic9.png)
+![plate](Pics/pic9.jpg)
 **Total time spent: 30m**
 
 
