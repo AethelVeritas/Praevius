@@ -53,4 +53,14 @@ The main issue at hand for now is the MCU footprint. Haven't been able to find a
 ![plate](Pics/pic9.jpg)
 **Total time spent: 30m**
 
+# September 16: Reversible MCU footprint
+Imported the erogen layout into KiCAD. 
+![kicad](Pics/pic10.png)
 
+Now I have to figure out the MCU footprint. Because of the castellated extra pins on the nrf52840 Plus, the main option would be to solder it using solder paste and a stencil. Issue is, stencils are not cheap (probably going to be about $10 from JLCPCB). But I think I could hand-solder it using a fine tip by using a footprint with large enough pads and holding the tip in the small notches of each pin. Found [this](https://www.youtube.com/watch?v=WMBia66Qavs) video after a quick search, in which the guy does essentially exactly what I was thinking. So it's definitely possible to hand-solder it.
+![jumpermcu](Pics/pic11.png)
+So essentially I've got a couple of problems if I want to make this reversible, as you can see in the above picture. So the jumpers I've placed above the nrf footprint for reference are 1.5 mm (the red part) and 3 mm (the purple/pink outer boxes) wide. These are the default open jumpers. Now I've got 9 of them in this pic, but 13 pins on that side of the MCU. So yeah 13 of those jumpers obviously won't fit inside the nrf's footprint. What I'm thinking is I'll make even smaller jumpers (0.8mm for the red part or reduce the spacing) and just use a finer tip on my soldering iron. Not 100% sure how doable this is though. If I want all pins to work, I also need too add those small pads between the large pads that you can see in the upper half to all of the lower half. That should be pretty simple though: just mirror the top pads. Another idea I just thought of would be to offset the jumpers. So maybe something like this:
+![offsetjumpers](Pics/pic12.png)
+But I'll have to see if the spacing for the traces and vias that come in between opposing pads allows this. Might be feasible with smaller jumpers nonetheless. 
+
+**Total time spent: 1 hour 5 minutes**
