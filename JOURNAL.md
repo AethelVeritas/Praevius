@@ -64,3 +64,18 @@ So essentially I've got a couple of problems if I want to make this reversible, 
 But I'll have to see if the spacing for the traces and vias that come in between opposing pads allows this. Might be feasible with smaller jumpers nonetheless. 
 
 **Total time spent: 1 hour 5 minutes**
+
+# September 26: MCU Footprint
+After some brainstorming, I realized that instead of spending time struggling with creating a custom jumper footprint that's both small enough to fit and large enough to hand solder I could just use the existing pads as one half of the jumpers and make the other half the same size and spacing as the pads. Messed around a bit with the idea in KiCAD and I think it's doable, especially if also offset the jumpers, as mentioned above. 
+![offset jumpers](Pics/pic13.png)
+As you can see in this screenshot, for the large pads I'll be using the pad itself as one half of the jumper and then adding a smaller custom pad of the same width for the other half. For the smaller pads, I'll use a trace to offset the jumper relative to the large pad jumpers and then just use a small custom jumper (again, same width as the pad). 
+After deciding on this approach, I attempted to modify the existing large pads into an arrow shape, to make bridging the jumper easier. And this is where things got complicated: I couldn't for the life of me figure out how to properly align and join a triangle to the existing jumper. I messed with the grid size, placed and used reference points, tried multiple shapes, but I still couldn't get it right. I could get it roughly right, but not perfect. I now realize I should have stopped at "good enough", but I guess my OCD didn't let me haha. Also, it seems I'll have to copy and paste these edited pads manually, as there is no mass edit tool for this.
+
+**Total time spent: 1h 20m**
+
+# September 27: MCU Footprint (continued)
+Continued working on the jumpers and pads. For the distance between jumper halves, I referenced the default KiCAD jumper gap, 0.3 mm. Did a lot of positioning and struggling with KiCAD's reference and snap system, but eventually got the hang of it. I forgot about the "Position interactively with offset" tool initially, which would have saved quite a lot of time. The good news is that everything will go much quicker from now on. Here's what I've done so far:
+![pics][Pics/pic17.png]
+Note to self: add solder mask front and back between the jumper halves, and double check manufacturing tolerances. I need to be able to fit traces between the pads to get to the jumpers.
+
+**Total time spent: 3h 20m**
