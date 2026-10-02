@@ -82,4 +82,16 @@ Note to self: add solder mask front and back between the jumper halves, and doub
 
 # Octomber 1:
 ![trace_nospace](Pics/pic18.png)
+![trace_nospace](Pics/pic19.png)
   So turns out I'm really dumb. As you can see in the above picture, traces don't fit between the pads. HOW IN THE WORLD DID I NOT THINK OF THIS BEFORE?!?!? Now I basically have to scrap the whole reversible idea and all the work I've done so far. I could technically maybe still make it reversible by adding the jumpers below the MCU, but then I'm not saving space at all. It'd be better to just use a pro micro sized board at that point. I guess I probably should focus more on just one project in the future to avoid dumb mistakes like this. Anyway, it's not that great of a tragedy, because the PCB will be only like $10 more expensive. I'll have four leftover PCBs gathering dust but it is what it is. Since now my initial idea of an onboard MCU and my subsequent reversible idea have proven unpractical, I guess I should just try and focus on polish, and make this as polished as possible. Oh and another thing I want to do is add some sort of button on the outermost side of the thumb portion, placed horizontally (perpendicularly with the last thumb switch). That way I'll have another button for right clicking and stuff. Saw the idea on reddit quite some time ago and thought I'd try and replicate it as it might be helpful when paired with the touchpad. I think it work exceptionally well paired with a trackpoint, as you wouldn't have to move your hand as much as with a trackpad, but I already bought the trackpad so I'll have to use that. I've also thought about using gaskets for a more cushioned/silent feel, but I'd be sacrificing too much height.  
+
+**Total time spent: 30m**
+
+# Octomber 2: 
+  I'm going to take a lot of inspiration from the Forager keyboard, as I really like the design. If I put the Xiao on the back similarly to the Forgager then I can make the case much more minimal, and it also removes the need for a MCU cover, which is great as I can't never seem to get those right. Disadvantage being that it'd raise the minimum height by a bit, and I can't do a bare PCB bottom. But since I'm planning on making an arm/pivot clamp thing for these I'll need space on the bottom to add magnets anyway, so that should be fine. Oh and another idea: maybe make the trackpad slightly slanted so that it's more comfortable to move to with the index and middle fingers.
+  I just realized I can't position the MCU like on the Forager, because I want to have a breakaway column (see first pic) so I guess I could put it as shown in the second pic (case would look a bit wonky though, and I might have to increase the stagger to get more space):
+![conflicting_mcu](Pics/pic21)
+![conflicting_mcu](Pics/pic20)
+  Today was mostly working on schematic and brainstorming the above. Tedious stuff unfortunately...I really wish I could somehow select several of the same symbols and just like add a letter instead of having to edit each manually. Eg. mass edit all diode references from "D1, D2, D3, etc" to something like "LD1, LD2, LD3, etc" for the left half.
+
+**Total time spent: 1h 15m**
