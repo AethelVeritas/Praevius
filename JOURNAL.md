@@ -75,7 +75,7 @@ After deciding on this approach, I attempted to modify the existing large pads i
 
 # September 27: MCU Footprint (continued)
 Continued working on the jumpers and pads. For the distance between jumper halves, I referenced the default KiCAD jumper gap, 0.3 mm. Did a lot of positioning and struggling with KiCAD's reference and snap system, but eventually got the hang of it. I forgot about the "Position interactively with offset" tool initially, which would have saved quite a lot of time. The good news is that everything will go much quicker from now on. Here's what I've done so far:
-![pics][Pics/pic17.png]
+![tophalf](Pics/pic17.png)
 Note to self: add solder mask front and back between the jumper halves, and double check manufacturing tolerances. I need to be able to fit traces between the pads to get to the jumpers.
 
 **Total time spent: 3h 20m**
