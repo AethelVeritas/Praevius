@@ -80,18 +80,31 @@ Note to self: add solder mask front and back between the jumper halves, and doub
 
 **Total time spent: 3h 20m**
 
-# Octomber 1:
+# Octomber 1: Reality Hits
 ![trace_nospace](Pics/pic18.png)
 ![trace_nospace](Pics/pic19.png)
   So turns out I'm really dumb. As you can see in the above picture, traces don't fit between the pads. HOW IN THE WORLD DID I NOT THINK OF THIS BEFORE?!?!? Now I basically have to scrap the whole reversible idea and all the work I've done so far. I could technically maybe still make it reversible by adding the jumpers below the MCU, but then I'm not saving space at all. It'd be better to just use a pro micro sized board at that point. I guess I probably should focus more on just one project in the future to avoid dumb mistakes like this. Anyway, it's not that great of a tragedy, because the PCB will be only like $10 more expensive. I'll have four leftover PCBs gathering dust but it is what it is. Since now my initial idea of an onboard MCU and my subsequent reversible idea have proven unpractical, I guess I should just try and focus on polish, and make this as polished as possible. Oh and another thing I want to do is add some sort of button on the outermost side of the thumb portion, placed horizontally (perpendicularly with the last thumb switch). That way I'll have another button for right clicking and stuff. Saw the idea on reddit quite some time ago and thought I'd try and replicate it as it might be helpful when paired with the touchpad. I think it work exceptionally well paired with a trackpoint, as you wouldn't have to move your hand as much as with a trackpad, but I already bought the trackpad so I'll have to use that. I've also thought about using gaskets for a more cushioned/silent feel, but I'd be sacrificing too much height.  
 
 **Total time spent: 30m**
 
-# Octomber 2: 
+# Octomber 2: Starting Schematic 
   I'm going to take a lot of inspiration from the Forager keyboard, as I really like the design. If I put the Xiao on the back similarly to the Forgager then I can make the case much more minimal, and it also removes the need for a MCU cover, which is great as I can't never seem to get those right. Disadvantage being that it'd raise the minimum height by a bit, and I can't do a bare PCB bottom. But since I'm planning on making an arm/pivot clamp thing for these I'll need space on the bottom to add magnets anyway, so that should be fine. Oh and another idea: maybe make the trackpad slightly slanted so that it's more comfortable to move to with the index and middle fingers.
   I just realized I can't position the MCU like on the Forager, because I want to have a breakaway column (see first pic) so I guess I could put it as shown in the second pic (case would look a bit wonky though, and I might have to increase the stagger to get more space):
-![conflicting_mcu](Pics/pic21)
-![conflicting_mcu](Pics/pic20)
+![conflicting_mcu](Pics/pic21.png)
+![conflicting_mcu](Pics/pic20.png)
   Today was mostly working on schematic and brainstorming the above. Tedious stuff unfortunately...I really wish I could somehow select several of the same symbols and just like add a letter instead of having to edit each manually. Eg. mass edit all diode references from "D1, D2, D3, etc" to something like "LD1, LD2, LD3, etc" for the left half.
 
 **Total time spent: 1h 15m**
+
+# Octomber 3: Switch Footprints and Positioning 
+  Alright, so I recently came up with this idea:
+![mx_on_mcu](Pics/pic23.png)
+Basically, why shouldn't I make this work with MX switches as well as ks33 low profile switches? Then I could reuse the PCBs I have left over, as I currently have like 45 MX switches from a previous handwired build. Yes it would make routing a bit more difficult, but I think it's manageable. Now the obvious problem is that if I position the MCU as in the above picture, the MX pin holes of the top-most pinky column switch would overlap with the MCU. But If I clip them and put solder only in the holes it should be doable. Janky I know, but worth it in my opinon. Or maybe I could add hotswap pads for the MX switches as well? Arghhh too much scope creep!!
+  If I use a 301230 battery (as shown in the picture below), it would fit perfectly, but I'm a bit worried about the battery life. I have that size on my Fulmen keyboard, and while the battery life is decent it's not great. And it would be much shorter with a trackpad. The Beekeeb Toucan 2 has a trackpad though, and after looking it up it seems it's a 401730. Now I was thinking that I could use a 3 series battery, but I also just noticed that the Forager uses a 4 series battery placed on the back of the PCB, with no cutout. So 4 mm tall battery should not raise the height of the keyboard as I initially thought, especially if I add a battery cutout in the PCB. I'll just use the same size battery as the Toucan. Should be alright.
+
+![pic](Pics/pic24.png)
+  I've made some footprints, or more accurately mashed some footprints together. Basically, I took Gateron KS33 Hotswap, KS33 Solderable, and MX Solderable footprint from [ai03's MX_v2 library](https://github.com/ai03-2725/MX_V2/tree/main/Gateron_KS33_Hotswap.pretty) and mashed them together in order to create a Gateron KS33 Hotswap + MX Solderable footprint (below left) and a Gateron KS33 Hotswap + MX Hotswap footprint (below right).  
+![pic](Pics/pic26.png)
+  I also isolated and exported the component outlines I need to reference to create the board outline using the plot tool. Exported the result as a .dxf, and tomorrow I'll import it into Onshape or Freecad, create an outline referencing said DXF, and then import that back into KiCAD. I'm currently split between Onshape and Freecad though, as if I'll end up with 4 extra PCBs and I already have a bunch of components from previous builds I might want to build and sell a keyboard or two in order to get rid of them. Issue is, if I design the case in Onshape I won't be allowed to do that at all. But if I make it in Freecad then it'll take me at least twice the time it would in Onshape. Anyways, I'll that out tomorrow. 
+
+**Total time spent: 2h 30m**

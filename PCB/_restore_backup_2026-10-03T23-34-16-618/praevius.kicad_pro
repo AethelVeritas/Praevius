@@ -530,7 +530,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "./Component_outlines",
+      "plot": "",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""

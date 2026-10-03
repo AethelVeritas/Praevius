@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "keeb-footprints") (type "KiCad") (uri "/home/greensword/Projects/veritas-kicad-lib/keeb-footprints.pretty") (options "") (descr ""))
+)
