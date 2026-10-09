@@ -78,6 +78,7 @@ Continued working on the jumpers and pads. For the distance between jumper halve
 ![tophalf](Pics/pic17.png)
 Note to self: add solder mask front and back between the jumper halves, and double check manufacturing tolerances. I need to be able to fit traces between the pads to get to the jumpers.
 
+P.S. Can't add two lapse links through the Forge UI unfortunately, so here's the link to the other lapse session from today https://lapse.hackclub.com/timelapse/ts0Ra3_rEeMy. 
 **Total time spent: 3h 20m**
 
 # Octomber 1: Reality Hits
@@ -93,6 +94,7 @@ Note to self: add solder mask front and back between the jumper halves, and doub
 ![conflicting_mcu](Pics/pic21.png)
 ![conflicting_mcu](Pics/pic20.png)
   Today was mostly working on schematic and brainstorming the above. Tedious stuff unfortunately...I really wish I could somehow select several of the same symbols and just like add a letter instead of having to edit each manually. Eg. mass edit all diode references from "D1, D2, D3, etc" to something like "LD1, LD2, LD3, etc" for the left half.
+![schematic](Pics/pic22.png)
 
 **Total time spent: 1h 15m**
 
@@ -101,10 +103,17 @@ Note to self: add solder mask front and back between the jumper halves, and doub
 ![mx_on_mcu](Pics/pic23.png)
 Basically, why shouldn't I make this work with MX switches as well as ks33 low profile switches? Then I could reuse the PCBs I have left over, as I currently have like 45 MX switches from a previous handwired build. Yes it would make routing a bit more difficult, but I think it's manageable. Now the obvious problem is that if I position the MCU as in the above picture, the MX pin holes of the top-most pinky column switch would overlap with the MCU. But If I clip them and put solder only in the holes it should be doable. Janky I know, but worth it in my opinon. Or maybe I could add hotswap pads for the MX switches as well? Arghhh too much scope creep!!
   If I use a 301230 battery (as shown in the picture below), it would fit perfectly, but I'm a bit worried about the battery life. I have that size on my Fulmen keyboard, and while the battery life is decent it's not great. And it would be much shorter with a trackpad. The Beekeeb Toucan 2 has a trackpad though, and after looking it up it seems it's a 401730. Now I was thinking that I could use a 3 series battery, but I also just noticed that the Forager uses a 4 series battery placed on the back of the PCB, with no cutout. So 4 mm tall battery should not raise the height of the keyboard as I initially thought, especially if I add a battery cutout in the PCB. I'll just use the same size battery as the Toucan. Should be alright.
-
 ![pic](Pics/pic24.png)
   I've made some footprints, or more accurately mashed some footprints together. Basically, I took Gateron KS33 Hotswap, KS33 Solderable, and MX Solderable footprint from [ai03's MX_v2 library](https://github.com/ai03-2725/MX_V2/tree/main/Gateron_KS33_Hotswap.pretty) and mashed them together in order to create a Gateron KS33 Hotswap + MX Solderable footprint (below left) and a Gateron KS33 Hotswap + MX Hotswap footprint (below right).  
 ![pic](Pics/pic26.png)
   I also isolated and exported the component outlines I need to reference to create the board outline using the plot tool. Exported the result as a .dxf, and tomorrow I'll import it into Onshape or Freecad, create an outline referencing said DXF, and then import that back into KiCAD. I'm currently split between Onshape and Freecad though, as if I'll end up with 4 extra PCBs and I already have a bunch of components from previous builds I might want to build and sell a keyboard or two in order to get rid of them. Issue is, if I design the case in Onshape I won't be allowed to do that at all. But if I make it in Freecad then it'll take me at least twice the time it would in Onshape. Anyways, I'll that out tomorrow. 
 
 **Total time spent: 2h 30m**
+
+# Octomber 9: Diode Footprint and Assigning References
+  Seeing as how the outline is rather tricky and I don't want to mess with FreeCAD right now, I think I'll route the first half and then make the outline before mirroring the other half. Changed all the reference values of the switches on the PCB to match the matrix order of the schematic for the first half, and routed the columns. Also made a that allows using either a DO-35 7.62 mm or SOD-123 1N4148 diode. Also, I was looking at the Forager and just now realized that it usese SMD nuts. Might be worth making sure I use a mounting hole footprint that allows me to use those, as they seem pretty nice. I like the ideas of screws on the bottom and not having to mess with standoffs or heat inserts. Or maybe I could try gaskets.
+![pic](Pics/pic28.png)
+![pic](Pics/pic29.png)
+
+**Total time spent: 1h**
+   
