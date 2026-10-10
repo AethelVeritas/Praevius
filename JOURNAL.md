@@ -117,3 +117,13 @@ Basically, why shouldn't I make this work with MX switches as well as ks33 low p
 
 **Total time spent: 1h**
    
+# Octomber 10: More Routing and Trackpad Research
+  I've come to the conclusion that I want to use SMD pads. The only issue with this would be that if I want to use some other form of mounting in the future I can't, because the holes necessary for these nuts are 3.6 mm. I might be able to use M3s though. Anyway, so what I'm thinking is that I'll add a series of holes for nuts, and also some plain M2 mounting holes. That way I can choose between one or the other for each PCB. Yes, routing will be more annoying, but I think it's doable. Oh and I just realized something: if I use SMD nuts, then I can even use one of the spare PCBs as a bottom plate for a more "hardware" look. Should have add some good silkscreen then.    
+  Tried seeing if I have enough space to make a 402030 lipo fit, as these are more readily available, but unfortunately I do not. I'll have to stick to the 401730. Looked at the Ergonaut keyboard and for the battery cutout it uses a +2 mm tolerance. 
+![pic](Pics/pic30.png)
+  Did some more routing, and started researching the trackpad stuff. So far by looking at the rather sparse datasheet and searching online I've been able to find that the Azoteq TPS65 has a FFC 1x06 connector on it with a 0.5 mm pitch and a ZIF lock. I still need to figure out its contact side: (top or bottom). I think I'll keep my options open, and add a matching FFC connector as well as solderable pads. Can't hurt. I initially tried searching for github repos of keyboards that also use this trackpad model in hopes of finding out the exact part they use for the FFC connector, but no luck. Oh and I also edited the diode footprint I made last time so that it looks nicer and is positioned correctly (pads were on the front instead of the back by default for the SMD diode). I still have to figure out how to properly connect the SMD pads to the THT pads in the footprint....DRC didn't seem too happy about my footprint.
+
+![pic](Pics/pic31.png)
+![pic](Pics/pic32.png)
+**Total time spent: 2h 50m**
+
